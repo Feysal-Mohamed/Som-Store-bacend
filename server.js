@@ -6,7 +6,7 @@ const customerRouter = require("./router/customerRouter");
 const orderRoter = require("./router/OrderRouter");
 // const orderRouter = require("./postRouter/orderRouter");
 const postRoutes = require("./router/postRouter");
-require("dotenv").config();
+// require("dotenv").config();
 
 const app = express();
 
@@ -31,13 +31,13 @@ app.use(orderRoter);
 // app.use(orderRouter);
 
 // Connect to MongoDB
-mongoose.connect(process.env.db_Url)
+mongoose.connect("mongodb+srv://Some-StotoreDb:NooIu4a6X8RqUE63@cluster0.eyqxqqt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => {
     console.log("Mongoose is connected successfully by feysal");
   })
   .catch(err => console.error("MongoDB connection error:", err));
 
 // Ensure PORT fallback in case env is missing
-const PORT = process.env.port || 7000;
+// const PORT = process.env.port || 7000;
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+app.listen(7000, () => console.log(`Server is running on port `));
