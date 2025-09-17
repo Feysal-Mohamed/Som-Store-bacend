@@ -15,10 +15,10 @@ app.use(express.json());
 app.use(cors());
 
 // Log incoming requests for debugging
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(`${req.method} ${req.url}`);
+//   next();
+// });
 
 // Static image route
 app.use("/AlImages", express.static("imageDocuments"));
@@ -33,7 +33,7 @@ app.use(orderRoter);
 // Connect to MongoDB
 mongoose.connect(process.env.db_Url)
   .then(() => {
-    console.log("Mongoose is connected successfully");
+    console.log("Mongoose is connected successfully by feysal");
   })
   .catch(err => console.error("MongoDB connection error:", err));
 
