@@ -31,7 +31,7 @@ app.use(orderRoter);
 // app.use(orderRouter);
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/Som-Store-Final_project")
+mongoose.connect("mongodb+srv://Some-StotoreDb:NooIu4a6X8RqUE63@cluster0.eyqxqqt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => {
     console.log("Mongoose is connected successfully by feysal");
   })
